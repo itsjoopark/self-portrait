@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: #F0EEE9;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+}
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#webcam {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 100;
+  transition: opacity 0.5s ease;
+}
+
+#loading p {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#loading .hint {
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+#loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
